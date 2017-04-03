@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "stdio.h"
 #include "../includes/ft_printf.h"
 
 void	print_args(t_format *format, t_conversion *conversion, va_list args)
@@ -67,10 +68,14 @@ void    print_percent(t_format *format)
 */
 void    traverse(t_format *format, va_list args)
 {
-    int count;
-    count = 0;
+   // int count;
+   // count = 0;
      while (FSP)
-    {
+     {
+        write(1, &FSP, 1);
+        format->pos++;
+     }
+/*      {
         if (FSP == '%')
         {
             count += 1;
@@ -98,7 +103,8 @@ void    traverse(t_format *format, va_list args)
             format->num_writt++;
             format->pos++;
         }
-    }
+    } */
+     //    printf(&FSP);
 }
 
 int     ft_printf(const char *string, ...)

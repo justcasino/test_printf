@@ -16,6 +16,7 @@
 #include "../libft/includes/libft.h"
 #include <stdarg.h>
 #include <stdint.h>
+#include <stdio.h>
 
 # define FSP (format->string[format->pos])
 # define RIGHT_PREC_CHECK (conversion->precision_on && conversion->precision < (unsigned int) ft_strlen(s) && conversion->specifier != INVALID)
@@ -90,21 +91,12 @@ char    *load_base_char(t_conversion *conversion, int base);
 char    *ft_itoa_base(uintmax_t num, t_conversion *conversion);
 char    *ft_itoa_uintmax(uintmax_t num);
 /*
-<<<<<<< HEAD
 ** functions in print_binary.c
 */
 void     print_binary(t_format *format, t_conversion *conversion, va_list args);
 /* 
-** functions in ft_putnbr_just.c
-*/
-=======
- ** functions in print_binary.c
- */
-void     print_binary(t_format *format, t_conversion *conversion, va_list args);
-/* 
  ** functions in ft_putnbr_just.c
  */
->>>>>>> 82dd602665922f65713f665ec5573b28e04bca14
 void    ft_putnbr_right_just(t_format *format, t_conversion *conversion,
         uintmax_t num, char pad);
 void    ft_putnbr_left_just(t_format *format, t_conversion *conversion,
